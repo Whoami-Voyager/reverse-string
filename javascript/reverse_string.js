@@ -1,5 +1,9 @@
 function reverseString(str) {
-  // type your code here
+  characters = str.split('')
+  characterArray = []
+  characters.map(letter => characterArray.unshift(letter))
+  const reversed = characterArray.join('')
+  return reversed
 }
 
 if (require.main === module) {
@@ -17,3 +21,8 @@ module.exports = reverseString;
 
 // Please add your pseudocode to this file
 // And a written explanation of your solution
+
+// function takes in string as an argument
+// splits that strings into single characters and puts into an array
+// takes that array and iterates over it and .pushes into a new array
+// merges that new array into a string
